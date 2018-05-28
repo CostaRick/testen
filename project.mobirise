@@ -73,8 +73,8 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n\n<input type=\"text\" name=\"daterange\" value=\"01/01/2018 - 01/15/2018\">\n\n{JS_CODE_0}",
-          "_customCSS": "/* Type valid CSS here */\n.my-image {\n  width: 100%;\n}\n \n\n\n\n",
+          "_customHTML": "\n<input type=\"text\" name=\"daterange\" value=\"01/01/2018 - 01/15/2018\">\n\n{JS_CODE_0}",
+          "_customCSS": "\n\n\n\n",
           "alias": "code-editor",
           "_tags": [
             "Extension"
