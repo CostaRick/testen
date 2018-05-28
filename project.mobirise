@@ -64,7 +64,7 @@
       "settings": {
         "title": "Page 1",
         "meta_descr": "",
-        "header_custom": "<link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">\n<script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js\"></script>\n<script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>",
+        "header_custom": "<!--  jQuery -->\n<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-1.11.3.min.js\"></script>\n\n\n\n<!-- Bootstrap Date-Picker Plugin -->\n<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js\"></script>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css\"/>",
         "footer_custom": "",
         "html_before": "",
         "order": 1
@@ -73,7 +73,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n               \n{JS_CODE_0}\n<link href=\"https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/css/gijgo.min.css\" rel=\"stylesheet\" type=\"text/css\">\n\n<div class=\"container\">\n  <br>\n  <input id=\"datepicker\" width=\"270\">\n<p><a href=\"http://gijgo.com/datepicker/example/bootstrap\">Bootstrap DatePicker</a> powered by gijgo.com</p>\n</div>",
+          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n               \n\n<div class=\"bootstrap-iso\">\n <div class=\"container-fluid\">\n  <div class=\"row\">\n   <div class=\"col-md-6 col-sm-6 col-xs-12\">\n\n    <!-- Form code begins -->\n    <form method=\"post\">\n      <div class=\"form-group\"> <!-- Date input -->\n        <label class=\"control-label\" for=\"date\">Date</label>\n        <input class=\"form-control\" id=\"date\" name=\"date\" placeholder=\"MM/DD/YYY\" type=\"text\">\n      </div>\n      <div class=\"form-group\"> <!-- Submit button -->\n        <button class=\"btn btn-primary \" name=\"submit\" type=\"submit\">Submit</button>\n      </div>\n     </form>\n     <!-- Form code ends --> \n\n    </div>\n  </div>    \n </div>\n</div>\n\n\n{JS_CODE_0}",
           "_customCSS": "/* Type valid CSS here */\n.my-image {\n  width: 100%;\n}\n \n\n\n\n",
           "alias": "code-editor",
           "_tags": [
@@ -83,7 +83,7 @@
           "_anchor": "custom-html-1",
           "_PHPplaceholders": [],
           "_JSplaceholders": [
-            "<script src=\"https://cdn.rawgit.com/atatanasov/gijgo/master/dist/combined/js/gijgo.min.js\" type=\"text/javascript\"></script>"
+            "<script>\n    $(document).ready(function(){\n      var date_input=$('input[name=\"date\"]'); //our date input has the name \"date\"\n      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : \"body\";\n      var options={\n        format: 'mm/dd/yyyy',\n        container: container,\n        todayHighlight: true,\n        autoclose: true,\n      };\n      date_input.datepicker(options);\n    })\n</script>"
           ]
         }
       ]
