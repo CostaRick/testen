@@ -1378,3 +1378,13 @@ body {
 #custom-html-0 .my-image {
   width: 100%;
 }
+#custom-html-1 label {
+  margin-left: 20px;
+}
+#custom-html-1 #datepicker {
+  width: 180px;
+  margin: 0 20px 20px 20px;
+}
+#custom-html-1 #datepicker > span:hover {
+  cursor: pointer;
+}
