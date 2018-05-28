@@ -64,7 +64,7 @@
       "settings": {
         "title": "Page 1",
         "meta_descr": "",
-        "header_custom": "<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-1.11.3.min.js\"></script>\n<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js\"></script>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css\">",
+        "header_custom": "\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"</link> \n\t<script src=\"http://code.jquery.com/jquery-3.1.1.min.js\"<</script>\n\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\t\n\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js\"></script>\n\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css\"></link>\n\t\n\t<script>\n\t\tfunction instantiateMyDatePicker() {\n\t\t\t$('#myDatePickerId').datepicker();\n\t\t}\n\t</script>",
         "footer_custom": "",
         "html_before": "",
         "order": 1
@@ -73,7 +73,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n               \n<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->\n<link rel=\"stylesheet\" href=\"https://formden.com/static/cdn/bootstrap-iso.css\"> \n\n<!--Font Awesome (added because you use icons in your prepend/append)-->\n<link rel=\"stylesheet\" href=\"https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css\">\n\n<!-- Inline CSS based on choices in \"Settings\" tab -->\n<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>\n\n<!-- HTML Form (wrapped in a .bootstrap-iso div) -->\n<div class=\"bootstrap-iso\">\n <div class=\"container-fluid\">\n  <div class=\"row\">\n   <div class=\"col-md-6 col-sm-6 col-xs-12\">\n    <form method=\"post\">\n     <div class=\"form-group \">\n      <label class=\"control-label \" for=\"date\">\n       Date\n      </label>\n      <div class=\"input-group\">\n       <div class=\"input-group-addon\">\n        <i class=\"fa fa-calendar\">\n        </i>\n       </div>\n       <input class=\"form-control\" id=\"date\" name=\"date\" placeholder=\"MM/DD/YYYY\" type=\"text\">\n      </div>\n     </div>\n     <div class=\"form-group\">\n      <div>\n       <button class=\"btn btn-primary \" name=\"submit\" type=\"submit\">\n        Submit\n       </button>\n      </div>\n     </div>\n    </form>\n   </div>\n  </div>\n </div>\n</div>\n\n\n<!-- Extra JavaScript/CSS added manually in \"Settings\" tab -->\n<!-- Include jQuery -->\n{JS_CODE_0}\n\n<!-- Include Date Range Picker -->\n{JS_CODE_1}\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css\">\n\n{JS_CODE_2}",
+          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n<div onload=\"instantiateMyDatePicker()\">               \n<input type=\"text\" id=\"myDatePickerId\">\n    </div>",
           "_customCSS": "/* Type valid CSS here */\n.my-image {\n  width: 100%;\n}\n \n\n\n\n",
           "alias": "code-editor",
           "_tags": [
@@ -82,11 +82,7 @@
           "_name": "pro.custom-html",
           "_anchor": "custom-html-1",
           "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-1.11.3.min.js\"></script>",
-            "<script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js\"></script>",
-            "<script>\n    $(document).ready(function(){\n        var date_input=$('input[name=\"date\"]'); //our date input has the name \"date\"\n        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : \"body\";\n        date_input.datepicker({\n            format: 'mm/dd/yyyy',\n            container: container,\n            todayHighlight: true,\n            autoclose: true,\n        })\n    })\n</script>"
-          ]
+          "_JSplaceholders": []
         }
       ]
     }
