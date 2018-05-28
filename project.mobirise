@@ -64,7 +64,7 @@
       "settings": {
         "title": "Page 1",
         "meta_descr": "",
-        "header_custom": " <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n    <script src=\"https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js\" type=\"text/javascript\"></script>\n    <link href=\"https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css\" rel=\"stylesheet\" type=\"text/css\" />",
+        "header_custom": "<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/jquery/latest/jquery.min.js\"></script>\n<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/momentjs/latest/moment.min.js\"></script>\n<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js\"></script>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css\" />",
         "footer_custom": "",
         "html_before": "",
         "order": 1
@@ -73,7 +73,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n\n    <input id=\"datepicker\" width=\"276\">\n    {JS_CODE_0}\ndw",
+          "_customHTML": "<!-- Type valid HTML here -->\n<img class=\"my-image\" src=\"@PROJECT_PATH@/assets/images/code-editor-placeholder.jpg\">\n\n<input type=\"text\" name=\"daterange\" value=\"01/01/2018 - 01/15/2018\">\n\n{JS_CODE_0}",
           "_customCSS": "/* Type valid CSS here */\n.my-image {\n  width: 100%;\n}\n \n\n\n\n",
           "alias": "code-editor",
           "_tags": [
@@ -83,7 +83,7 @@
           "_anchor": "custom-html-1",
           "_PHPplaceholders": [],
           "_JSplaceholders": [
-            "<script>\n        $('#datepicker').datepicker({\n            uiLibrary: 'bootstrap4'\n        });\n    </script>"
+            "<script>\n$(function() {\n  $('input[name=\"daterange\"]').daterangepicker({\n    opens: 'left'\n  }, function(start, end, label) {\n    console.log(\"A new date selection was made: \" + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));\n  });\n});\n</script>"
           ]
         }
       ]
